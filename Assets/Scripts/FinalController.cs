@@ -5,11 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class FinalController : MonoBehaviour
 {
+
+    [SerializeField]
+    GameObject SceneController;
     void OnTriggerEnter(Collider collider)
     {
         if (collider.CompareTag("Player"))
         {
-            SceneManager.LoadScene(1);
+            SceneController.GetComponent<SceneController>().Win();
         }
     }
 }
