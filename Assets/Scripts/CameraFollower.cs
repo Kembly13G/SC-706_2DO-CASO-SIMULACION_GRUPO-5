@@ -16,9 +16,8 @@ public class CameraFollower : MonoBehaviour
         {
             offset = transform.position - followTarget.position;
         }
-        /* Esconder el cursor del Mouse */
+
         Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
     }
     void LateUpdate()
     {
