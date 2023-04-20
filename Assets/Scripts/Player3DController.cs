@@ -161,4 +161,9 @@ public class Player3DController : MonoBehaviour
             door.SetActive(true);
         }
     }
+
+    public int GetGemsCollected()
+    {
+        return Mathf.FloorToInt(TotalGems);
+    }
 }

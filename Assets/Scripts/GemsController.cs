@@ -12,8 +12,6 @@ public class GemsController : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        
-
         if (other.CompareTag("Player"))
         {
             Player3DController controller = other.GetComponent<Player3DController>();

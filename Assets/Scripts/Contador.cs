@@ -6,16 +6,12 @@ using UnityEngine.UI;
 
 public class Contador : MonoBehaviour
 {
-    //Declaración de variables
-    [SerializeField] private Text textoContador;
-    private int puntos = 0;
-
-    private void OnTriggerEnter(Collider other)
+    [SerializeField]
+    GameObject Player;
+    [SerializeField]
+    Text Gems;
+    void Update()
     {
-        //Incremento los puntos
-        puntos++; //Incrementa en 1 el valor de la variable puntos (es lo mismo que puntos = puntos + 1
-
-        //Actualizo el texto del contador de puntos
-        textoContador.text = puntos.ToString();
+        Gems.text=Player.GetComponent<Player3DController>().GetGemsCollected().ToString()+"/12 Gems";
     }
 }
